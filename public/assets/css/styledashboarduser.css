@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+.body{
+    background: url(css/background.jpg);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding: 2rem 9%;
+    margin-left: 0%;
+}
+section:nth-child(even){
+    background: #fff;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #060606;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn:hover{
+    background: #F3B664;
+    letter-spacing: .1rem;
+}
+header{
+    position: fixed;
+    top: 0%; left: 0%; right: 0%;
+    background: #0E8388;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 5px;
+}
+header .logo{
+    font-size: 3rem;
+    color:#060606;
+    font-weight: bolder;
+}
+header .logo span{
+    color:#f6f2f3 ;
+}
+.menu-bar{
+    background: #0E8388;
+    text-align: center;
+    font-size: 13px;
+}
+
+.menu-bar ul{
+   display: inline-flex;
+   list-style: none;
+   color: #060606;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #080808;
+}
+
+.active, .menu-bar ul li:hover{
+    background: #CBE4DE;
+    border-radius: 3px;
+}
+
+.menu-bar .fa{
+    margin-right: 10px;
+}
+
+.sub-menu{
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background-color: #CBE4DE;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.menu-bar ul li:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #f6f2f3;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #100e0f;
+    margin-left: 2rem;
+}
+
+header .icons a:hover{
+    color: #CBE4DE;
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color:#100e0f;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgb(8, 7, 8);
+    display: none;
+}
+
+.tentang h1{
+    font-size: 6rem;
+    color: #100e0f;
+    text-align: center;
+    background: #0E8388;
+}
+.tentang h1 span{
+    font-size: 6rem;
+    color: #ffffff;
+    text-align: center;
+}
+.tentang .row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.tentang .row .image{
+    flex: 1 1 45rem;
+}
+.tentang .row .image img{
+    width: 100%;
+    height: 50%;
+}
+.tentang .row .content{
+    flex: 1 1 45rem;
+}
+.tentang .row .content h3{
+    color: #000000;
+    font-size: 5rem;
+    padding: .5rem 0;
+}
+.tentang .row .content h3 span{
+    color: #0E8388;
+    font-size: 5rem;
+    padding: .5rem 0;
+}
+.tentang .row .content p{
+    color: #5c5757;
+    font-size: 2.0rem;
+    padding: .5rem 0;
+    line-height: 2;
+    text-align: justify;
+}
+
+.kategori h1{
+    font-size: 5rem;
+    color: #100e0f;
+    text-align: center;
+    background: #0E8388;
+}
+.kategori h1 span{
+    font-size: 5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.kategori .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    float: none;
+    border-radius: 15px;
+}
+.kategori .box-container .box{
+    flex: 1 2 30rem;
+    box-shadow: 0 .5rem 1.5rem #0E8388;
+    border-radius: 15px;
+    border: .1rem solid #0E8388;
+    position: relative;
+}
+.kategori .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+.kategori .box-container .box .image img{
+    height: 25rem;
+}
+.kategori .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.kategori .box-container .content{
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+}
+.kategori .box-container .content1{
+    text-align: center;
+    font-size: 2rem;
+    color: #0E8388;
+}
+.kategori .box-container .box .image .content icon{
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+}
+.kategori .box-container .box .image .content icon a{
+    cursor: pointer;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background-color: #0E8388;
+    color: #fff;
+}
+
+footer .credit{
+    text-align: center;
+    border-top: 0rem solid #000000;
+    font-size: 1.5rem;
+    color: #CBE4DE;
+    background: #2E4F4F;
+    object-fit: contain;
+    padding: .0rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.0rem;;
+    margin-bottom: 1.5rem;
+}
