@@ -76,10 +76,10 @@
                         class="block px-3 text-black bg-blue-700 @yield('home') rounded md:bg-transparent md:text-white md:p-0 "
                         aria-current="page">Home</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="#"
                         class="block px-3 text-gray-900 roundedmd:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Category</a>
-                </li>
+                </li> --}}
                 {{-- <li>
                     <a href="{{ route('peminjaman') }}"
                         class="block px-3 text-black bg-blue-700 @yield('loan') rounded md:bg-transparent md:text-white md:p-0">Loan</a>
@@ -89,10 +89,10 @@
                         class="block px-3 text-black bg-blue-700 @yield('reminder') rounded md:bg-transparent md:text-white md:p-0">Reminder
                         to Return</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="#"
                         class="block px-3 text-gray-900 rounded md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Testimoni</a>
-                </li>
+                </li> --}}
                 <div class="flex md:order-2">
                     <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
                         aria-expanded="false"

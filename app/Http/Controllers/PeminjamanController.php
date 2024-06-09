@@ -29,9 +29,7 @@ class PeminjamanController extends Controller
         return view('pengingatKembaliPeminjaman')->with(['peminjaman'=>$peminjaman]);
     }
 
-    public function mainlayoutAdmin()  {
-        return view ('layouts.mainlayoutAdmin');
-    }
+  
 
     public function pengajuanPeminjaman(Request $request){
 
@@ -44,11 +42,7 @@ class PeminjamanController extends Controller
 
         $date = Carbon::createFromFormat('Y-m-d', $request->tanggalSelesai)->setTime(now()->hour, now()->minute, now()->second)->setTimezone('Asia/Makassar');
 
-        // if ($request->hasFile('gambar')) {
-        //     $gambar = $request->file('gambar')->store('uploads/sampul_peminjaman');
-        // } else {
-        //     $gambar = 'gambar kosong bang';
-        // }
+     
 
         $peminjaman = new peminjaman;
 
@@ -90,7 +84,7 @@ class PeminjamanController extends Controller
 
 
 
-        Session::flash('berhasil', 'berhasil mengubah status peminjaman');
+        Session::flash('berhasil', 'Buku berhasil dikembalikan');
 
         return redirect('tabelPeminjam');
 

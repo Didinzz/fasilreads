@@ -32,28 +32,33 @@
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class="px-6 py-3">Nama</th>
-                            <th scope="col" class="px-6 py-3">NIM</th>
-                            <th scope="col" class="px-6 py-3">No WhatsApp</th>
-                            <th scope="col" class="px-6 py-3">Action</th>
+                            <th scope="col" class="px-6 py-3 text-center">Nomor</th>
+                            <th scope="col" class="px-6 py-3 text-center">Nama</th>
+                            <th scope="col" class="px-6 py-3 text-center">NIM</th>
+                            <th scope="col" class="px-6 py-3 text-center">No WhatsApp</th>
+                            <th scope="col" class="px-6 py-3 text-center">Action</th>
                         </tr>
                     </thead>
                     @foreach ($user as $u)
                         <tbody>
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <th scope="row"
-                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    class="px-6 py-4 font-medium text-center text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{ $loop->iteration }}
+                                </th>
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center dark:text-white">
                                     {{ $u->username }}
                                 </th>
-                                <td class="px-6 py-4">{{ $u->nimNip }}</td>
-                                <td class="px-6 py-4">{{ $u->No_WhatsApp }}</td>
-                                <td class="px-6 py-4">
+                                <th class="px-6 py-4 text-center">{{ $u->nimNip }}</th>
+                                <th class="px-6 py-4 text-center">{{ $u->No_WhatsApp }}</th>
+                                <th class="px-6 py-4 text-center">
                                     <button data-modal-target="#popup-modal{{ $u->id }}"
                                         data-modal-toggle="popup-modal{{ $u->id }}"
                                         class="bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 text-white font-bold py-2 px-4 rounded-full">
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
-                                </td>
+                                </th>
                             </tr>
                         </tbody>
                         {{-- modal --}}

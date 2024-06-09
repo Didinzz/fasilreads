@@ -270,9 +270,5 @@ class DasboardadminController extends Controller
         return  redirect('profileAdmin');
     }
 
-    public function navbarAdmin()
-    {
-        $user = User::where('role', 1)->first();
-        return view('components.admin.navbarAdmin')->with(['user' => $user]);
-    }
+   
 }

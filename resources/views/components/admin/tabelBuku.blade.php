@@ -82,14 +82,16 @@
                  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                          <div class="px-6 py-4 bg-white dark:bg-gray-900 shadow">
-                             <a href="{{ route('createBuku') }}" class=""><button class="cursor-pointer transition-all bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 text-white px-6 py-2 rounded-l border-cyan-600 border-b-[4px] hover:brightness-110  active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
-                            create
-                        </button></a>
+                             <a href="{{ route('createBuku') }}" class=""><button
+                                     class="cursor-pointer transition-all bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 text-white px-6 py-2 rounded-l border-cyan-600 border-b-[4px] hover:brightness-110  active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+                                     Create
+                                 </button></a>
                          </div>
                          <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                  <tr>
 
+                                     <th scope="col" class="px-6 py-3 text-center">Nomor</th>
                                      <th scope="col" class="px-6 py-3 text-center">gambar</th>
                                      <th scope="col" class="px-6 py-3 text-center">Nama Buku</th>
                                      <th scope="col" class="px-6 py-3 text-center">Stok</th>
@@ -102,8 +104,12 @@
                              </thead>
                              @foreach ($buku as $b)
                                  <tbody>
+
                                      <tr
                                          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                         <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white text-center">
+                                             {{ $loop->iteration }}
+                                         </td>
                                          <td class="p-4">
                                              <img src="{{ asset('storage/' . $b->sampul) }}"
                                                  class="w-16 md:w-32 max-w-full max-h-full" alt="Apple Watch" />
@@ -119,6 +125,8 @@
                                                      placeholder="" required />
                                              </div>
                      </div>
+                     </td>
+
                      </td>
                      <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white text-center">
                          {{ $b->Penerbit }}
