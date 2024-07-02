@@ -1,6 +1,6 @@
 # Dokumentasi Clone Laravel Using Git
 
-## instalasi
+## Instalasi
 
 1.  Clone Repository
 ```
